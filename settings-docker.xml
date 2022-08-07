@@ -11,11 +11,11 @@
         <mirrorOf>central</mirrorOf>
     </mirror>
   </mirrors>
-    <proxies>
+<!--     <proxies>
         <proxy>
             <active>true</active>
             <host>myproxy.host.net</host>
             <port>80</port>
         </proxy>
-    </proxies>
+    </proxies> -->
 </settings>
