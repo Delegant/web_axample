@@ -1,0 +1,22 @@
+#!groovy
+// Check ub1 properties
+properties([disableConcurrentBuilds()])
+
+pipeline {
+    agent {
+        label 'ubuntu_server'
+    }
+    options {
+        buildDiscarder(logRotator(numToKeepStr: '10', artifactNumToKeepStr: '10'))
+        timestamps()
+    }
+    stages {
+        stage("create docker image") {
+            steps {
+                echo "================ start building ================"
+                    sh 'ls -la'
+                    sh 'docker compose up'
+            }
+        }
+    }
+}
